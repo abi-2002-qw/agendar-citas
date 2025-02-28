@@ -123,6 +123,9 @@ def abrir_ventana_paciente(paciente_id):
         combo_medicos.grid(row=0, column=1)
         conn = conectar_a_mysql()
         c = conn.cursor()
+
+
+        
         c.execute('SELECT nombre FROM medicos')
         medicos = c.fetchall()
         conn.close()
